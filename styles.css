@@ -1,0 +1,288 @@
+:root {
+    --color-principal: #444DF2; /* Azul vibrante para elementos principales */
+    --color-secundario: #04172544; /* Azul oscuro para el fondo de las textareas */
+    --color-terciario: #730255a1; /* Púrpura profundo para el footer */
+    --color-botones: #000000ce; /* Negro para los botones con algo de opaciad  */
+    --color-texto: #66D9EF; /* azul celeste metalizado para texto legible */
+    --color-hover-boton: #b3b3b325; /* Color más claro para el efecto hover de los botones */
+    --sombra-boton: 0 0 10px rgba(5, 219, 242, 0.7); /* Sombra  para botones */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./muñeco-alura2.2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-terciario);
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.5;
+    color: var(--color-texto);
+    width: 100vw;
+    padding: 10px;
+    margin: 0;
+    height: 100vh;
+}
+
+.logo {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    margin-top: 3%; 
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.textarea-container {
+    margin: 2px 0;
+    width: 80%;
+}
+
+.textarea-primera {
+    width: 100%;
+    height: 30vh;
+    border: none;
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: bolder;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.textarea-segunda {
+    width: 100%;
+    height: 40vh;
+    border: none;
+    background: var(--color-secundario) url('./muñeco-alura.png') no-repeat left bottom;
+    background-size: 50%;
+    color: var(--color-texto);
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: bolder;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.informacion {
+    background-color: #730255ab;
+    color: var(--color-texto);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.950rem;
+    text-align: left;
+    margin-top: 3px;
+    max-width: 100%;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+    gap: 40px;
+}
+
+button {
+    background: var(--color-botones);
+    border: 1px solid var(--color-botones);
+    border-radius: 30px;
+    color: var(--color-texto);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: inherit;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    margin: 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: var(--sombra-boton); /* Sombra luminosa */
+}
+
+button.encriptar, button.desencriptar, button.copiar {
+    background-color: var(--color-botones);
+}
+
+button:hover {
+    background-color: var(--color-hover-boton);
+    color: var(--color-texto);
+    box-shadow: 0 0 15px rgba(5, 219, 242, 0.9); /* Sombra más intensa al pasar el cursor */
+}
+
+@media (max-width: 800px) {
+    button {
+        padding: 8px;
+        font-size: 1rem;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .container {
+        padding-bottom: 60px;
+        width: 95%;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textarea-primera,
+    .textarea-segunda {
+        width: 90%;
+        height: auto;
+    }
+
+    .informacion {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .botones {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer {
+        font-size: 0.875rem;
+        padding: 10px;
+        position: relative;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center; /* Centrar los textareas */
+        width: auto;
+        margin: auto;
+    }
+
+    .textarea-primera,
+    .textarea-segunda {
+        width: 80%;
+        height: 20vh;
+        margin-top: 10px; /* Espacio adicional en la parte superior */
+    }
+
+    .informacion {
+        width: 80%;
+        text-align: center;
+    }
+
+    .botones {
+        width: 70%;
+    }
+}
+
+
+
+    .textarea-primera,
+    .textarea-segunda {
+        width: 60%;
+        height: 40vh;
+    }
+
+    .informacion {
+        width: 35%;
+        margin-left: 5%;
+    }
+
+    .botones {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 70px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .textarea-primera,
+    .textarea-segunda {
+        width: 90%;
+        height: auto;
+        margin-top: 20px; /* Más espacio entre el logo y textareas */
+    }
+
+    .informacion {
+        width: 95%;
+        text-align: center;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .footer {
+        font-size: 0.875rem;
+        padding: 10px;
+        position: relative;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-terciario);
+    color: var(--color-texto);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
