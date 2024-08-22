@@ -1,3 +1,6 @@
+*/https://b-squeda-cifrada-encriptador.vercel.app/*/
+
+
 Características:
 
 Encriptación y Desencriptación: Convierte texto en un formato encriptado y viceversa.
